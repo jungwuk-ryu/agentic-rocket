@@ -1,0 +1,18 @@
+{
+  "pages": 6,
+  "page_points": [
+    960,
+    540
+  ],
+  "aspect_ratio": "16:9",
+  "timing_seconds": 180,
+  "fonts": [
+    "AAAAAA+Pretendard-Bold",
+    "AAAAAA+Pretendard-Regular",
+    "AAAAAA+Pretendard-SemiBold"
+  ],
+  "fonts_embedded": true,
+  "bilingual_pages": true,
+  "screenshots_used": false,
+  "note": "Wine allocation/reuse is an illustrative optimization scenario, not a measured finding."
+}

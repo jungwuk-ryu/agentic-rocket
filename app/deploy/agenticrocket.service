@@ -1,0 +1,18 @@
+[Unit]
+Description=AgenticRocket evidence-backed optimization workspace
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/ubuntu/works/agentic-rocket/app
+EnvironmentFile=-/home/ubuntu/.config/agenticrocket/runtime.env
+ExecStart=/home/ubuntu/works/agentic-rocket/app/deploy/start-agenticrocket.sh
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+UMask=0077
+
+[Install]
+WantedBy=default.target

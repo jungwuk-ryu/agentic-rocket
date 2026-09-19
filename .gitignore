@@ -1,0 +1,24 @@
+# Credentials and local environment
+DAYTONA_KEY
+AGENTICROCKET_MASTER_PROMPT.md
+AGENTICROCKET_PROGRESS.md
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+.env
+.env.*
+!.env.example
+
+# Local runtime and build output
+node_modules/
+dist/
+runtime/
+*.log
+
+# Local work products and interpreter caches
+_workspace/
+**/__pycache__/
+*.py[cod]
