@@ -22,7 +22,9 @@ export class OpenAICompatibleClient {
         tools,
         tool_choice: tools.length ? "auto" : "none",
       }),
-      signal: signal ? AbortSignal.any([signal, AbortSignal.timeout(120_000)]) : AbortSignal.timeout(120_000),
+      signal: signal
+        ? AbortSignal.any([signal, AbortSignal.timeout(120_000)])
+        : AbortSignal.timeout(120_000),
     });
     if (!response.ok) {
       const detail = (await response.text()).slice(0, 500);

@@ -14,20 +14,42 @@ async function readOptionalTrimmed(path) {
 }
 
 export async function loadConfig() {
-  const daytonaKeyFile = process.env.DAYTONA_API_KEY_FILE || defaultDaytonaKeyFile;
-  const daytonaApiKey = process.env.DAYTONA_API_KEY || (await readOptionalTrimmed(daytonaKeyFile));
+  const daytonaKeyFile =
+    process.env.DAYTONA_API_KEY_FILE || defaultDaytonaKeyFile;
+  const daytonaApiKey =
+    process.env.DAYTONA_API_KEY || (await readOptionalTrimmed(daytonaKeyFile));
   const proxyApiKey = process.env.CLI_PROXY_API_KEY?.trim();
+  const firebaseProjectId = (process.env.FIREBASE_PROJECT_ID || "daytona-70675").trim();
+  const administratorEmail = (process.env.AGENTICROCKET_ADMIN_EMAIL || "vojougae35@gmail.com").trim().toLowerCase();
+  const demoAdministratorPasswordHash =
+    process.env.AGENTICROCKET_DEMO_ADMIN_PASSWORD_HASH?.trim();
+  const demoSessionSecret = process.env.AGENTICROCKET_DEMO_SESSION_SECRET?.trim();
 
   return {
     host: process.env.HOST || "127.0.0.1",
     port: Number.parseInt(process.env.PORT || "8761", 10),
-    proxyBaseUrl: (process.env.CLI_PROXY_BASE_URL || "http://127.0.0.1:8317/v1").replace(/\/$/, ""),
+    proxyBaseUrl: (
+      process.env.CLI_PROXY_BASE_URL || "http://127.0.0.1:8317/v1"
+    ).replace(/\/$/, ""),
     proxyApiKey,
-    model: process.env.OPENAI_MODEL || process.env.CLI_PROXY_MODEL || "gpt-5.6-terra",
+    model:
+      process.env.OPENAI_MODEL ||
+      process.env.CLI_PROXY_MODEL ||
+      "gpt-5.6-terra",
     daytonaApiKey,
     daytonaKeyFile,
-    runtimeDir: resolve(process.env.AGENTICROCKET_DATA_DIR || resolve(process.cwd(), "runtime")),
-    contextSoftLimit: Math.max(2_000, Number(process.env.CONTEXT_SOFT_TOKENS) || 240_000),
+    firebaseProjectId,
+    administratorEmail,
+    demoAdministratorPasswordHash,
+    demoSessionSecret,
+    demoCookieSecure: process.env.AGENTICROCKET_DEMO_COOKIE_SECURE !== "false",
+    runtimeDir: resolve(
+      process.env.AGENTICROCKET_DATA_DIR || resolve(process.cwd(), "runtime"),
+    ),
+    contextSoftLimit: Math.max(
+      2_000,
+      Number(process.env.CONTEXT_SOFT_TOKENS) || 240_000,
+    ),
     maxAgentTurns: Math.max(4, Number(process.env.MAX_AGENT_TURNS) || 36),
     credentialsReady: Boolean(proxyApiKey && daytonaApiKey),
     configurationMissing: [
