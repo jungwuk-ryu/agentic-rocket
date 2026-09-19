@@ -32,7 +32,46 @@ export function isGoogleUser(user) {
 }
 
 export async function currentFirebaseIdToken() {
-  return auth.currentUser ? auth.currentUser.getIdToken() : null;
+  return auth.currentUser && isGoogleUser(auth.currentUser)
+    ? auth.currentUser.getIdToken()
+    : null;
+}
+
+async function authPayload(response) {
+  const payload = await response.json().catch(() => ({}));
+  if (!response.ok) {
+    const error = new Error(payload.error || "The sign-in request could not be completed.");
+    error.status = response.status;
+    throw error;
+  }
+  return payload;
+}
+
+export async function restoreDemoAdministrator() {
+  const response = await fetch("/api/auth/session", {
+    credentials: "same-origin",
+    cache: "no-store",
+  });
+  const payload = await authPayload(response);
+  return payload.viewer?.authType === "demo" ? payload.viewer : null;
+}
+
+export async function signInWithDemoAdministrator(password) {
+  const response = await fetch("/api/auth/demo", {
+    method: "POST",
+    credentials: "same-origin",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ password }),
+  });
+  return (await authPayload(response)).viewer;
+}
+
+export async function signOutDemoAdministrator() {
+  const response = await fetch("/api/auth/logout", {
+    method: "POST",
+    credentials: "same-origin",
+  });
+  await authPayload(response);
 }
 
 export async function signInWithGoogle() {

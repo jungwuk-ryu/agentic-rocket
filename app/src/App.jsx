@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { CircleNotch, WarningCircle, X } from "@phosphor-icons/react";
 import {
   ACTIVE_STATUSES,
@@ -21,7 +21,10 @@ import { AuthGate } from "./components/AuthGate.jsx";
 import {
   isGoogleUser,
   observeGoogleAuth,
+  restoreDemoAdministrator,
+  signInWithDemoAdministrator,
   signInWithGoogle,
+  signOutDemoAdministrator,
   signOutFromGoogle,
 } from "./lib/firebase-auth.js";
 
@@ -191,7 +194,10 @@ function WorkspaceApp({ authUser, signOut }) {
         page={route.page}
         sessions={sessions}
         activeSessionId={activeSessionId}
-        viewer={configuration?.viewer || { email: authUser.email, name: authUser.displayName }}
+        viewer={configuration?.viewer || {
+          email: authUser.email,
+          name: authUser.displayName || authUser.name,
+        }}
         signOut={signOut}
       />
       <main className="workspace" id="main-content" tabIndex={-1}>
@@ -297,53 +303,116 @@ function WorkspaceApp({ authUser, signOut }) {
 function authErrorMessage(error) {
   if (error?.code === "auth/popup-closed-by-user") return "Google sign-in was cancelled.";
   if (error?.code === "auth/popup-blocked") return "Your browser blocked the Google sign-in window. Allow pop-ups and try again.";
-  return error?.message || "Google sign-in could not be completed.";
+  return error?.message || "Sign-in could not be completed.";
 }
 
 export function App() {
   const [authReady, setAuthReady] = useState(false);
   const [authUser, setAuthUser] = useState(null);
-  const [authBusy, setAuthBusy] = useState(false);
+  const [demoUser, setDemoUser] = useState(null);
+  const [authBusy, setAuthBusy] = useState("");
   const [authError, setAuthError] = useState("");
+  const authRevision = useRef(0);
 
-  useEffect(() => observeGoogleAuth((user) => {
-    setAuthUser(user);
-    setAuthReady(true);
-    setAuthBusy(false);
-  }), []);
+  useEffect(() => {
+    let cancelled = false;
+    const reconcile = async (user) => {
+      const currentRequest = ++authRevision.current;
+      if (isGoogleUser(user)) {
+        if (cancelled || currentRequest !== authRevision.current) return;
+        setAuthUser(user);
+        setDemoUser(null);
+        setAuthReady(true);
+        setAuthBusy("");
+        return;
+      }
+      try {
+        const restoredDemoUser = await restoreDemoAdministrator();
+        if (cancelled || currentRequest !== authRevision.current) return;
+        setAuthUser(user);
+        setDemoUser(restoredDemoUser);
+      } catch {
+        if (cancelled || currentRequest !== authRevision.current) return;
+        setAuthUser(user);
+        setDemoUser(null);
+      } finally {
+        if (!cancelled && currentRequest === authRevision.current) {
+          setAuthReady(true);
+          setAuthBusy("");
+        }
+      }
+    };
+    const unsubscribe = observeGoogleAuth((user) => {
+      void reconcile(user);
+    });
+    return () => {
+      cancelled = true;
+      unsubscribe();
+    };
+  }, []);
 
   const signIn = async () => {
-    setAuthBusy(true);
+    authRevision.current += 1;
+    setAuthBusy("google");
     setAuthError("");
     try {
+      await signOutDemoAdministrator().catch(() => {});
+      setDemoUser(null);
       await signInWithGoogle();
     } catch (error) {
       setAuthError(authErrorMessage(error));
-      setAuthBusy(false);
+      setAuthBusy("");
+    }
+  };
+
+  const signInDemo = async (password) => {
+    authRevision.current += 1;
+    setAuthBusy("demo");
+    setAuthError("");
+    try {
+      const viewer = await signInWithDemoAdministrator(password);
+      setDemoUser(viewer);
+      setAuthReady(true);
+      return viewer;
+    } catch (error) {
+      setAuthError(authErrorMessage(error));
+      return null;
+    } finally {
+      setAuthBusy("");
     }
   };
 
   const signOut = async () => {
-    setAuthBusy(true);
+    authRevision.current += 1;
+    setAuthBusy("sign-out");
     try {
       await signOutFromGoogle();
+      await signOutDemoAdministrator();
+      authRevision.current += 1;
+      setAuthUser(null);
+      setDemoUser(null);
       window.location.hash = "#/home";
+    } catch (error) {
+      setAuthError(authErrorMessage(error));
     } finally {
-      setAuthBusy(false);
+      setAuthBusy("");
     }
   };
 
-  if (!authReady || !isGoogleUser(authUser)) {
+  const signedInUser = isGoogleUser(authUser) ? authUser : demoUser;
+  if (!authReady || !signedInUser) {
     return (
       <AuthGate
         loading={!authReady}
-        signedInWithAnotherProvider={authReady && Boolean(authUser)}
-        busy={authBusy}
+        signedInWithAnotherProvider={authReady && Boolean(authUser) && !isGoogleUser(authUser)}
+        busy={authBusy === "google"}
+        demoBusy={authBusy === "demo"}
         error={authError}
         signIn={signIn}
+        signInDemo={signInDemo}
       />
     );
   }
 
-  return <WorkspaceApp key={authUser.uid} authUser={authUser} signOut={signOut} />;
+  return <WorkspaceApp key={signedInUser.uid} authUser={signedInUser} signOut={signOut} />;
 }

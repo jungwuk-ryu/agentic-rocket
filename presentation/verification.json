@@ -1,5 +1,5 @@
 {
-  "pages": 6,
+  "pages": 11,
   "page_points": [
     960,
     540
@@ -14,5 +14,81 @@
   "fonts_embedded": true,
   "bilingual_pages": true,
   "screenshots_used": false,
-  "note": "Wine allocation/reuse is an illustrative optimization scenario, not a measured finding."
+  "corner_qr_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "corner_qr_bbox_points": [
+    834,
+    16,
+    108,
+    108
+  ],
+  "qr_url": "https://jungwuk.jungwuk.com",
+  "note": "User narrative with a brief market and prepaid-credit business model. Includes the original pigeon image and a large demo QR. 150 seconds of talk plus 30 seconds of demo.",
+  "text_intact": true,
+  "text_overlaps": 0,
+  "corner_qr_overlaps": 0,
+  "essential_text_min_pt": 24,
+  "pigeon_original_embedded_on_page": 4,
+  "business_model_page": 10,
+  "business_model_seconds": 15,
+  "business_model": "Prepaid credits consumed by optimization and verification usage",
+  "qr_page": 11,
+  "corner_qr_decode_at_page_widths": {
+    "1536": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "960": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "640": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ]
+  },
+  "large_qr_decodes": true,
+  "pdf_qr_clickable": true,
+  "pptx_qr_clickable": true,
+  "pptx_slide_count": 11,
+  "talk_seconds": 150,
+  "live_demo_seconds": 30
 }

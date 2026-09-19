@@ -1,46 +1,67 @@
 # AgenticRocket 발표 자료
 
-6장 · 16:9 · 한영 병기 · 3분 발표
+11장 · 16:9 · 한국어/영어 병기 · Pretendard 내장
 
-- `AgenticRocket_3min_KO-EN.pdf`: 발표용 PDF. 한글 글꼴을 내장한 벡터 문서입니다.
-- `AgenticRocket_3min_KO-EN.pptx`: 편집 가능한 원본. 각 슬라이드의 발표자 노트에 한국어와 영어 대본을 넣었습니다.
-- `speaker-notes.md`: 슬라이드별 시간과 대본. 한국어 또는 영어 중 한 언어로 발표합니다.
-- `previews/overview.png`: 전체 미리보기.
-- `build_deck.py`: PDF와 PowerPoint를 함께 생성하는 소스.
+발표 시간은 **설명 2분 30초 + 실제 데모 30초**로 배정했습니다. 비즈니스 설명은 15초입니다. 한국어와 영어 대본 중 하나로 발표합니다.
 
-발표의 중심은 **병목 발견 → 실제 로우레벨 소스 수정 → 실행과 반복 검증**입니다. 성능 검사만 하는 도구로 소개하지 않습니다.
+- `AgenticRocket_3min_KO-EN.pdf`: 발표용 PDF.
+- `AgenticRocket_3min_KO-EN.pptx`: 편집용 PowerPoint. 발표자 노트에 한영 대본과 시간이 있습니다.
+- `speaker-notes.md`: 발표 대본과 데모 진행 순서.
+- `previews/overview.png`: 11장 전체 미리보기.
+- `assets/demo-qr.png`: https://jungwuk.jungwuk.com 으로 연결되는 QR 원본.
+- `story_slides.py`: 발표 흐름·문구·배치.
+- `build_deck.py`: PDF·PowerPoint·미리보기 생성기.
+- `archive/AgenticRocket_6slide_previous.zip`: 이전 6장 버전 보관본.
+- `archive/AgenticRocket_10slide_before_business.zip`: 비즈니스 장 추가 전 보관본.
 
-## Wine 사례의 범위
+## 구성
 
-2장의 메모리 할당·재사용 그림은 로우레벨 최적화를 설명하는 **활용 시나리오**입니다. 실제 Wine 코드에서 발견된 결함이나 측정 결과를 뜻하지 않습니다. 발표 대본에도 이 범위를 반영했습니다.
+1. AgenticRocket
+2. 바이브코딩으로 쉬워진 제품 개발
+3. 최적화도 사용자 경험
+4. 작동을 넘어 올바르고 빠르게 — 첨부한 비둘기 이미지
+5. 성능 개선에는 검증이 필요하며, 외부 환경에서 내 작업과 분리
+6. Strix·Snyk·Semgrep의 보안 사례에서 성능 최적화로 연결
+7. Daytona로 만든 AgenticRocket
+8. 코드 탐색 → 개선안 → 직접 수정 → 여러 샌드박스의 병렬 검증
+9. 프로젝트를 맡기고 수정 코드·검증 결과 확인
+10. 초기 타깃 시장과 크레딧 충전 수익 모델
+11. 실제 데모와 큰 QR
 
-프로젝트 명세의 첫 데모 대상은 C++17 PulseLog입니다. 이번 자료에는 확인되지 않은 성능 수치, 실사용 사례, 실제 Wine 최적화 완료 주장을 넣지 않았습니다. 제품의 기획과 동작을 설명하는 발표 자료이며, 서비스의 구현 완료 인증 자료는 아닙니다.
+## 편집과 다시 만들기
 
-## 스크린샷 추가
-
-5장 오른쪽 결과 보고서 영역을 실제 화면으로 교체하면 됩니다. PowerPoint에서는 `RESULT_SCREENSHOT_REGION` 도형 영역에 수정 코드·테스트·측정 결과가 보이는 화면을 배치하세요. 작은 글씨가 많은 전체 대시보드보다 결과 영역을 크게 보여주는 편이 좋습니다.
-
-생성 소스로 교체하려면:
+PowerPoint 편집 시 `assets/fonts`의 Pretendard를 설치하면 서체가 유지됩니다. 라이선스도 포함했습니다. PDF에는 글꼴이 내장되어 있습니다. 핵심 본문과 도식은 24pt 이상입니다.
 
 ```bash
 python3 -m venv .venv
-.venv/bin/pip install reportlab pymupdf python-pptx
-.venv/bin/python build_deck.py --screenshot /absolute/path/to/results.png
+.venv/bin/pip install reportlab pymupdf python-pptx 'qrcode[pil]'
+.venv/bin/python build_deck.py
 ```
 
-Wine 측정이 아닌 화면을 넣을 때는 해당 저장소 이름을 그대로 유지하세요. 4장의 세 샌드박스는 각 환경 내부의 수정 전후 반복 비교를 뜻합니다.
+`--screenshot /absolute/path/to/results.png` 옵션은 9장의 하단 도식을 실제 결과 화면으로 교체합니다. 그림이 복잡하다면 PowerPoint에서 해당 장을 다시 배치해 결과를 크게 보여주는 편이 좋습니다.
 
-## 폰트와 가독성
+비둘기 그림은 원본 비율로 그대로 넣었습니다. 모든 장 오른쪽 위에 108pt 정사각형 데모 QR을 넣었습니다. 마지막 장에는 큰 316pt QR도 유지했습니다. QR은 스캔에 필요한 흰색 여백을 포함합니다. PDF와 PowerPoint의 QR은 클릭으로도 연결됩니다.
 
-PDF에는 Pretendard를 내장했습니다. 편집용 PowerPoint를 열 때는 `assets/fonts`의 Pretendard를 설치하면 서체가 유지됩니다. 라이선스도 같은 폴더에 포함했습니다. 요청에 따라 제목을 약 8–12% 줄였으며, 주요 문장은 29–78pt, 설명과 도식은 24pt 이상입니다. 페이지 번호와 보조 표기는 작게 처리했습니다.
+## 문구의 근거와 범위
 
-## 참고 자료 · 2026-09-19 확인
+사용자가 제공한 10단계 흐름에 간략한 비즈니스 설명을 추가했습니다. 초기 타깃은 시스템·네이티브 소프트웨어 개발팀으로 제안하고, 수익 모델은 사용자가 정한 크레딧 충전 방식으로 표현했습니다. 최적화·검증 사용량만큼 크레딧을 차감하는 모델이며, 가격과 세부 과금 단위는 정하지 않았습니다. 결제 기능의 구현 상태를 주장하는 장은 아닙니다.
 
-- [프로젝트 기획 대화](https://chatgpt.com/c/6a887f75-72e0-83e8-8eab-962dee8434d2)와 저장소의 `AGENTICROCKET_MASTER_PROMPT.md`: 지속적인 한 프로젝트 세션, 실제 소스 패치, 동일 수정안의 세 샌드박스 검증, 검증 근거 전달.
-- [Wine 공식 소스 미러 README](https://github.com/wine-mirror/wine/blob/master/README.md): Windows 프로그램을 Unix 계열 환경에서 실행하는 소프트웨어라는 소개.
-- [Daytona 공식 문서](https://www.daytona.io/docs/en/): 코드 실행용 sandbox와 관리 기능. 세 환경의 판정 기준은 AgenticRocket 자체 기획입니다.
-- [PulseLog 데모 저장소](https://github.com/jungwuk-ryu/agenticrocket-demo-perf): C++17, CMake, correctness tests, CPU 중심 benchmark.
-- [CodSpeed](https://codspeed.io/), [Codeflash](https://www.codeflash.ai/), [Bencher](https://bencher.dev/): 성능 검사·최적화 제품이 이미 있으므로, 시장에 경쟁 제품이 없다는 주장은 사용하지 않았습니다.
-- [Daytona HackSprint Seoul](https://luma.com/daytonaseoul): 행사 맥락.
+확인되지 않은 숫자와 과한 단정은 다음과 같이 다듬었습니다.
 
-발표 화면에서는 출처와 구현 세부 내용을 줄이고, 핵심 메시지와 개념 도식에 집중했습니다.
+- 하루 제품 출시 수는 숫자 대신 “새로운 프로덕트가 매일 쏟아집니다”로 표현했습니다.
+- 로컬에서 다른 작업을 절대 해서는 안 된다는 주장 대신, 다른 작업이 측정에 간섭할 수 있다고 설명했습니다. 외부 실행 환경에서도 조건을 맞춘 반복 측정은 필요합니다.
+- 성능 최적화 제품도 존재하므로, 시장에 제품이 없다는 주장 대신 “성능 최적화도 맡길 수 있을까요?”로 연결했습니다.
+- 현재 앱의 GPT 기반 설정을 확인했습니다. 화면에는 AI 에이전트, 대본에는 GPT를 예로 들었습니다.
+- 실제 성능 수치는 슬라이드에 넣지 않았습니다. 마지막 데모에서 확인되는 측정 결과를 설명하면 됩니다.
+
+## 출처 · 2026-09-19 확인
+
+- [Strix](https://www.strix.ai/): 취약점 탐지와 검증·수정.
+- [Snyk DeepCode AI](https://snyk.io/platform/deepcode-ai/): 코드 보안 분석과 수정 지원.
+- [Semgrep Assistant](https://semgrep.dev/blog/2024/assistant-ga-launch/): AI 기반 보안 분류와 수정 제안.
+- [Daytona](https://www.daytona.io/): AI 코드 실행용 샌드박스 인프라.
+- [Google Benchmark의 변동성 제어 안내](https://github.com/google/benchmark/blob/main/docs/reducing_variance.md): 측정 결과가 실행 환경의 영향을 받는다는 근거.
+- [CodSpeed](https://codspeed.io/)와 [Codeflash](https://www.codeflash.ai/): 성능 측정·자동 최적화 제품이 존재한다는 사실 확인.
+- 저장소의 `AGENTICROCKET_MASTER_PROMPT.md`, `app/README.md`, `app/server/lib/config.mjs`: 제품 흐름, 지속적인 프로젝트 세션, 모델 설정, Daytona 검증 설계.
+
+이 자료는 제품 발표용이며, 서비스 전체의 실행 검증 보고서는 아닙니다.

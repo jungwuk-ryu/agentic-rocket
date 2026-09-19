@@ -237,6 +237,48 @@ textarea {
   justify-content: center !important;
   margin-top: 28px;
 }
+.auth-demo-trigger {
+  justify-content: center !important;
+  width: 100%;
+  margin-top: 10px;
+}
+.auth-demo-form {
+  display: grid;
+  gap: 12px;
+  margin-top: 12px;
+  padding: 14px;
+  border: 1px solid #31516b;
+  border-radius: 8px;
+  background: #07131fcc;
+}
+.auth-demo-form label {
+  display: grid;
+  gap: 7px;
+  color: #b7c8d8;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .03em;
+}
+.auth-demo-form input {
+  width: 100%;
+  min-height: 42px;
+  padding: 10px 11px;
+  border: 1px solid #36536a;
+  border-radius: 6px;
+  outline: 0;
+  color: #f4f8fc;
+  background: #07111a;
+  font: inherit;
+  letter-spacing: normal;
+}
+.auth-demo-form input:focus-visible {
+  border-color: var(--lime);
+  box-shadow: 0 0 0 3px #b7f46a22;
+}
+.auth-demo-submit {
+  justify-content: center !important;
+  margin-top: 0 !important;
+}
 .auth-rule {
   display: flex;
   align-items: center;

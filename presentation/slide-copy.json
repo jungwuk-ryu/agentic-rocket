@@ -1,50 +1,90 @@
 [
   {
-    "time": "00:00–00:20",
-    "seconds": 20,
-    "title": "느린 코드를 직접 고치는 AI",
-    "ko": "안녕하세요. AgenticRocket은 느린 코드의 병목을 찾아 직접 고치는 AI 성능 최적화 솔루션입니다. 프로그램 안쪽의 로우레벨 코드를 다룹니다. 불필요한 계산이나 메모리 작업을 줄여 같은 일을 더 빠르게 끝내는 것이 목표입니다.",
-    "en": "AgenticRocket is an AI performance engineer that finds bottlenecks and changes the code. We focus on low-level optimization: removing unnecessary computation and memory work so software can do the same job faster.",
-    "cue": "첫 문장 뒤 한 박자 쉰다. “직접 고치는”에 힘을 준다."
-  },
-  {
-    "time": "00:20–00:55",
-    "seconds": 35,
-    "title": "Wine으로 이해하는 로우레벨 최적화",
-    "ko": "Wine을 예로 들어보겠습니다. Windows 프로그램을 Linux에서도 실행하게 해주는 오픈소스입니다. 프로그램은 잘 실행되는데, 안에서 같은 메모리 공간을 매번 새로 준비하느라 시간을 쓴다고 가정해보죠. 기존 공간을 다시 쓸 수 있다면, 같은 결과를 내는 데 필요한 작업이 줄어듭니다. 화면은 이런 최적화를 설명하는 예시입니다. AgenticRocket은 이렇게 코드 깊숙한 곳의 낭비를 찾아 줄이려 합니다.",
-    "en": "Take Wine, the open-source project that runs Windows programs on Linux. Imagine a frequently called path allocating fresh memory every time. If it can safely reuse that memory, it can do the same work with less overhead. This diagram illustrates an optimization idea, rather than a measured Wine result. It makes our focus tangible: finding and removing wasted work deep inside the code.",
-    "cue": "왼쪽의 반복 할당에서 오른쪽의 재사용으로 손짓한다. Wine은 활용 시나리오로 소개한다."
-  },
-  {
-    "time": "00:55–01:30",
-    "seconds": 35,
-    "title": "병목 발견부터 실제 소스 수정까지",
-    "ko": "사용자는 프로젝트와 목표를 맡깁니다. 기존 동작을 유지하면서 더 빠르게 만들어달라는 겁니다. 에이전트는 코드를 읽고 실행 결과를 확인해 느린 원인을 찾습니다. 수정할 방법을 정하면 소스를 직접 바꾸고 빌드와 테스트를 돌립니다. 오류가 나면 그 결과를 읽고 다시 고칩니다. 이 일을 한 에이전트가 같은 프로젝트에서 계속 맡습니다. 사용자가 이 패치로 다시 측정해달라고 하면, 앞선 작업을 이어서 진행합니다.",
-    "en": "You give the agent a project and a goal: make it faster while preserving its behavior. It reads the code, examines execution results, and narrows down the bottleneck. Then it edits the source, builds it, and runs the tests. If something fails, it uses that result to revise the fix. One agent stays with the project, so follow-up requests continue from the existing work.",
-    "cue": "분석 → 수정 → 재실행 순서로 짚는다. “소스를 직접 바꾼다”가 핵심이다."
-  },
-  {
-    "time": "01:30–02:10",
-    "seconds": 40,
-    "title": "Daytona에서 실행하고 반복 검증",
-    "ko": "여기서 Daytona가 핵심 역할을 합니다. AI가 실제 코드를 고치고 실행하는 작업 공간이면서 개선을 확인하는 실험실입니다. 수정안 하나를 세 개의 샌드박스, 즉 분리된 실행 공간에 보냅니다. 각 공간 안에서 원본과 수정본을 같은 조건으로 여러 번 비교합니다. 기능 테스트와 결과값도 확인합니다. 한 번 우연히 빨랐다는 이유로 성공이라고 하지 않습니다. 반복해서 개선이 확인돼야 하고 결과가 불안정하면 판단을 보류합니다.",
-    "en": "Daytona provides both the workspace where the agent changes and runs code, and the sandboxes where we check the improvement. We send one fixed patch to three sandboxes. Within each sandbox, we compare the original and modified code repeatedly under matched conditions. We also check tests and outputs. One lucky fast run is not enough. The improvement must be consistent, and uncertain results remain inconclusive.",
-    "cue": "세 상자를 천천히 짚는다. “각 공간 안에서 전후 비교”를 분명히 말한다."
-  },
-  {
-    "time": "02:10–02:40",
-    "seconds": 30,
-    "title": "코드와 검증 근거를 함께 전달",
-    "ko": "개발자는 실제 수정 코드와 검증 근거를 가져갑니다. 무엇을 바꿨는지, 어떤 기능 테스트를 통과했는지, 측정한 작업이 얼마나 빨라졌는지 함께 확인합니다. 수정안과 보고서를 내려받아 코드 리뷰에 사용할 수 있습니다. AI가 왜 이렇게 고쳤는지도 같은 프로젝트에서 물어볼 수 있습니다. 개발자는 코드와 실행 결과를 보고 이 변경을 받아들일지 결정합니다.",
-    "en": "The developer gets the actual patch together with the evidence: what changed, which tests passed, and the measured performance difference. The patch and report can be downloaded for code review. You can also ask the same agent why it made the change. That gives the developer something concrete to review before deciding whether to adopt the optimization.",
-    "cue": "실제 화면이 준비되면 오른쪽 보고서 도식을 교체하고, 수정 코드와 측정 결과를 짚는다."
-  },
-  {
-    "time": "02:40–03:00",
-    "seconds": 20,
+    "seconds": 7,
     "title": "AgenticRocket",
-    "ko": "저희가 만들고 싶은 것은, 프로젝트를 맡기면 병목을 찾아 고치고 검증까지 이어가는 AI 성능 엔지니어입니다. Wine 같은 복잡한 소프트웨어에도 이런 최적화 작업을 더 쉽게 맡길 수 있도록 하겠습니다. AgenticRocket. AI가 고치고 실행으로 증명합니다. 감사합니다.",
-    "en": "Our goal is an AI performance engineer that stays with a project, finds the bottleneck, makes the fix, and verifies it. We want to make that work accessible even for complex software like Wine. AgenticRocket: AI makes the fix. Real runs prove the gain. Thank you.",
-    "cue": "마지막 제품명과 핵심 문장을 말한 뒤 멈춘다."
+    "ko": "안녕하세요. AI가 코드를 직접 고치고 검증하는 성능 최적화 솔루션, AgenticRocket입니다.",
+    "en": "Meet AgenticRocket: an AI performance engineer that changes code and verifies the improvement.",
+    "cue": "제품명 뒤 잠깐 멈추고 다음 장으로 전환한다.",
+    "time": "00:00–00:07"
+  },
+  {
+    "seconds": 11,
+    "title": "바이브코딩으로 쉬워진 제품 개발",
+    "ko": "바이브코딩 덕분에 AI와 대화하며 프로덕트를 만드는 일이 쉬워졌습니다. 새로운 프로덕트도 매일 쏟아집니다.",
+    "en": "Vibe coding makes it easier to build a product by talking to AI. New products keep appearing every day.",
+    "cue": "“만드는 일은 쉬워졌다”만 전달하고 길게 설명하지 않는다.",
+    "time": "00:07–00:18"
+  },
+  {
+    "seconds": 14,
+    "title": "성능 최적화도 사용자 경험",
+    "ko": "차별점은 어디서 만들까요? 기획, UI, UX를 고민하지만, 사용자가 기다리는 시간도 UX입니다. 같은 기능이라면 바로 반응하는 제품이 좋겠죠. 최적화도 사용자 경험의 일부입니다.",
+    "en": "How does a product stand out? We think about the idea, UI, and UX. But waiting is part of UX, too. A responsive product feels better. Performance matters.",
+    "cue": "오른쪽 UX 영역 안의 성능을 짚는다.",
+    "time": "00:18–00:32"
+  },
+  {
+    "seconds": 12,
+    "title": "올바르고 빠르게 작동해야 한다",
+    "ko": "작동하기만 하면 끝일까요? 이 비둘기도 일단 날아가긴 합니다. 하지만 우리가 원하는 건, 의도한 방식으로 제대로, 그리고 빠르게 움직이는 제품입니다.",
+    "en": "Is working enough? This pigeon does fly, in its own way. What we want is software that behaves as intended, and does it fast.",
+    "cue": "비둘기 그림을 보여주고 청중이 볼 시간을 짧게 준다.",
+    "time": "00:32–00:44"
+  },
+  {
+    "seconds": 17,
+    "title": "성능 개선에는 검증이 필수",
+    "ko": "빨라졌다는 말에는 검증이 필요합니다. 원본과 수정본을 반복 실행하고 기능도 확인해야 하죠. 로컬 측정은 시간이 걸리고 다른 작업의 간섭도 받습니다. 외부 환경에서 검증하면 내 컴퓨터에서는 개발을 계속할 수 있습니다.",
+    "en": "A speedup needs evidence: repeated comparisons and behavior checks. Local tests take time, and other work can affect the measurements. Remote verification lets us keep developing on our own machine.",
+    "cue": "로컬의 자원 경쟁과 외부 실행의 작업 분리를 설명한다. 외부 환경만으로 측정 정확도가 보장된다는 표현은 쓰지 않는다.",
+    "time": "00:44–01:01"
+  },
+  {
+    "seconds": 14,
+    "title": "보안에서 성능 최적화로",
+    "ko": "보안에는 Strix, Snyk, Semgrep처럼 문제를 찾고 수정을 돕는 서비스들이 있습니다. 성능 최적화도 에이전트에게 맡겨, 병목을 고친 코드와 검증 결과를 받을 수 있지 않을까요?",
+    "en": "Strix, Snyk, and Semgrep help find and fix security issues. Could an agent handle performance optimization, too, returning a code change and the evidence behind it?",
+    "cue": "서비스 이름은 한 번에 읽는다. 경쟁 제품이 없다는 주장 대신 성능 최적화의 위임으로 연결한다.",
+    "time": "01:01–01:15"
+  },
+  {
+    "seconds": 13,
+    "title": "Daytona로 만든 AgenticRocket",
+    "ko": "그래서 Daytona 위에 AgenticRocket을 만들었습니다. 빠른 환경 준비와 손쉬운 도구 연결 덕분에, 에이전트가 코드를 고치고 실행할 공간을 구성하기 좋았습니다.",
+    "en": "We built AgenticRocket on Daytona. Its fast sandbox setup and agent-friendly tools give the AI a workspace to inspect, change, and run code.",
+    "cue": "Daytona의 연결·실행·에이전트 도구 세 항목을 짚고 넘어간다.",
+    "time": "01:15–01:28"
+  },
+  {
+    "seconds": 24,
+    "title": "코드 탐색, 개선안, 수정, 병렬 검증",
+    "ko": "GPT 같은 에이전트가 코드를 탐색하고 개선 가설을 세워 소스를 직접 수정합니다. 같은 에이전트가 프로젝트 맥락을 유지합니다. 이어서 Daytona 샌드박스 여러 개를 병렬로 실행합니다. 각 환경에서 같은 수정안을 원본과 반복 비교하고, 기능 검사와 성능 측정으로 개선 여부를 판단합니다.",
+    "en": "An agent such as GPT explores the code, forms a hypothesis, and edits the source while keeping the project context. Multiple Daytona sandboxes then run in parallel. Each repeatedly compares the same patch against the original, checking behavior and measuring performance.",
+    "cue": "왼쪽의 한 에이전트에서 오른쪽의 여러 검증 환경으로 이어지는 흐름을 짚는다.",
+    "time": "01:28–01:52"
+  },
+  {
+    "seconds": 16,
+    "title": "프로젝트를 맡기면 결과를 받는다",
+    "ko": "프로젝트를 등록하고 목표를 정하면, 에이전트가 최적화를 진행해 수정 코드와 검증 결과를 돌려줍니다. 무엇이 달라졌는지 확인하고 변경을 받아들일지 결정하면 됩니다.",
+    "en": "Add a project and set a goal. The agent returns a patch and verification results. Review what changed and how it performed, then decide whether to adopt it.",
+    "cue": "프로젝트 입력과 수정 코드·검증 결과 두 산출물을 짚는다.",
+    "time": "01:52–02:08"
+  },
+  {
+    "seconds": 15,
+    "title": "시장과 크레딧 충전 모델",
+    "ko": "첫 고객은 성능 개선이 필요한 시스템·네이티브 소프트웨어 개발팀입니다. 수익 모델은 크레딧 충전입니다. 고객이 크레딧을 구매하고, 최적화와 검증을 실행한 사용량만큼 차감하는 방식입니다.",
+    "en": "We’ll start with systems and native software teams that need better performance. Revenue comes from prepaid credits: customers top up, then spend credits on optimization and verification, based on usage.",
+    "cue": "초기 타깃과 크레딧 충전 모델만 짧게 설명한다. 가격이나 아직 정하지 않은 과금 단위는 덧붙이지 않는다.",
+    "time": "02:08–02:23"
+  },
+  {
+    "seconds": 37,
+    "title": "실제 데모",
+    "ko": "이제 실제 데모를 보시겠습니다. QR로 접속하실 수 있습니다. AI가 고친 코드와 검증 결과를 확인해보죠.",
+    "en": "Let’s see it in action. Scan the QR code to open the demo. We’ll look at the patch and verification results.",
+    "cue": "02:23–02:30 전환 멘트. 02:30–03:00 실제 웹 데모: 목표와 프로젝트 → 실제 코드 변경 → 기능 검사와 측정 결과. QR을 스캔하거나 클릭해 https://jungwuk.jungwuk.com 에 접속한다. 숫자는 화면에서 확인되는 실제 결과만 말한다.",
+    "time": "02:23–03:00"
   }
 ]

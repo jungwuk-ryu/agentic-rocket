@@ -82,14 +82,9 @@ export function currentVerification(session) {
 
 export async function authorizedFetch(path, options = {}) {
   const token = await currentFirebaseIdToken();
-  if (!token) {
-    const error = new Error("Sign in with Google to continue.");
-    error.status = 401;
-    throw error;
-  }
   const headers = new Headers(options.headers || {});
-  headers.set("authorization", `Bearer ${token}`);
-  return fetch(path, { ...options, headers });
+  if (token) headers.set("authorization", `Bearer ${token}`);
+  return fetch(path, { ...options, headers, credentials: "same-origin" });
 }
 
 export async function request(path, options) {

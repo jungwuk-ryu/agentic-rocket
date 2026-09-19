@@ -25,11 +25,11 @@
   },
   {
     "page": 1,
-    "text": "01 / 06",
+    "text": "01 / 11",
     "bbox": [
       852,
       508,
-      30.791015625,
+      27.470703125,
       11.9287109375
     ],
     "font_pt": 10,
@@ -39,57 +39,45 @@
     "page": 1,
     "text": "AgenticRocket",
     "bbox": [
-      91,
-      33,
-      177.60742187500003,
-      31.0146484375
+      54,
+      154,
+      509.21777343749994,
+      87.07958984375
     ],
-    "font_pt": 26,
+    "font_pt": 73,
     "essential": true
   },
   {
     "page": 1,
-    "text": "느린 코드,",
+    "text": "코드를 고치고, 성능을 검증하는 AI",
     "bbox": [
-      56,
-      119,
-      222.578125,
-      66.80078125
+      59,
+      287,
+      429.25,
+      38.171875
     ],
-    "font_pt": 56,
+    "font_pt": 32,
     "essential": true
   },
   {
     "page": 1,
-    "text": "AI가 직접 고칩니다.",
+    "text": "AI that optimizes code and verifies the gain.",
     "bbox": [
-      56,
-      192,
-      419.923828125,
-      64.4150390625
+      59,
+      343,
+      546.41015625,
+      33.400390625
     ],
-    "font_pt": 54,
+    "font_pt": 28,
     "essential": true
   },
   {
     "page": 1,
-    "text": "Slow code.\nOptimized by AI.",
+    "text": "로우레벨 성능 최적화",
     "bbox": [
-      58,
-      295,
-      271.4658203125,
-      86.68623046875
-    ],
-    "font_pt": 37,
-    "essential": true
-  },
-  {
-    "page": 1,
-    "text": "로우레벨 최적화",
-    "bbox": [
-      58,
-      443,
-      150.890625,
+      59,
+      439,
+      198.7265625,
       28.62890625
     ],
     "font_pt": 24,
@@ -97,11 +85,11 @@
   },
   {
     "page": 1,
-    "text": "Low-level optimization",
+    "text": "Low-level performance optimization",
     "bbox": [
-      268,
-      445,
-      242.8125,
+      367,
+      441,
+      386.671875,
       28.62890625
     ],
     "font_pt": 24,
@@ -121,11 +109,11 @@
   },
   {
     "page": 2,
-    "text": "WINE · OPTIMIZATION SCENARIO",
+    "text": "THE VIBE-CODING ERA",
     "bbox": [
       352,
       508,
-      150.849609375,
+      104.931640625,
       11.9287109375
     ],
     "font_pt": 10,
@@ -133,11 +121,11 @@
   },
   {
     "page": 2,
-    "text": "02 / 06",
+    "text": "02 / 11",
     "bbox": [
       852,
       508,
-      32.275390625,
+      28.955078125,
       11.9287109375
     ],
     "font_pt": 10,
@@ -145,11 +133,11 @@
   },
   {
     "page": 2,
-    "text": "Wine 최적화 시나리오",
+    "text": "바이브코딩의 시대",
     "bbox": [
       56,
       40,
-      151.140625,
+      121.57324218750001,
       20.27880859375
     ],
     "font_pt": 17,
@@ -157,11 +145,11 @@
   },
   {
     "page": 2,
-    "text": "Illustrative scenario",
+    "text": "The vibe-coding era",
     "bbox": [
-      225.140625,
+      195.5732421875,
       41,
-      138.375,
+      144.484375,
       19.0859375
     ],
     "font_pt": 16,
@@ -169,98 +157,50 @@
   },
   {
     "page": 2,
-    "text": "같은 결과, 더 적은 작업.",
+    "text": "만드는 일은\n쉬워졌습니다.",
     "bbox": [
       56,
-      92,
-      398.58984375000006,
-      51.29345703125
+      107,
+      262.453125,
+      111.0178125
     ],
-    "font_pt": 43,
+    "font_pt": 48,
     "essential": true
   },
   {
     "page": 2,
-    "text": "Same result. Less work.",
-    "bbox": [
-      57,
-      154,
-      338.8125,
-      38.171875
-    ],
-    "font_pt": 32,
-    "essential": true
-  },
-  {
-    "page": 2,
-    "text": "Wine: Windows 앱을 Linux에서 실행",
+    "text": "Building products\nis getting easier.",
     "bbox": [
       58,
-      211,
-      364.3125,
-      28.62890625
+      246,
+      257.6513671875,
+      76.98474609375
     ],
-    "font_pt": 24,
+    "font_pt": 33,
     "essential": true
   },
   {
     "page": 2,
-    "text": "Runs Windows apps on Linux",
+    "text": "새로운 프로덕트가 매일 쏟아집니다.",
     "bbox": [
       58,
-      243,
-      312.609375,
-      28.62890625
+      394,
+      362.65429687500006,
+      31.0146484375
     ],
-    "font_pt": 24,
+    "font_pt": 26,
     "essential": true
   },
   {
     "page": 2,
-    "text": "매번 메모리 할당",
+    "text": "New products launch every day.",
     "bbox": [
-      79,
-      321,
-      182.68359375,
-      33.400390625
+      58,
+      435,
+      375.27343750000006,
+      31.0146484375
     ],
-    "font_pt": 28,
-    "essential": true
-  },
-  {
-    "page": 2,
-    "text": "Allocate every time",
-    "bbox": [
-      80,
-      359,
-      214.1357421875,
-      29.82177734375
-    ],
-    "font_pt": 25,
-    "essential": true
-  },
-  {
-    "page": 2,
-    "text": "기존 공간 재사용",
-    "bbox": [
-      511,
-      321,
-      182.68359375,
-      33.400390625
-    ],
-    "font_pt": 28,
-    "essential": true
-  },
-  {
-    "page": 2,
-    "text": "Reuse the memory",
-    "bbox": [
-      512,
-      359,
-      209.66796875,
-      29.82177734375
-    ],
-    "font_pt": 25,
+    "font_pt": 26,
     "essential": true
   },
   {
@@ -277,11 +217,11 @@
   },
   {
     "page": 3,
-    "text": "FIND · FIX · RUN",
+    "text": "PERFORMANCE IS UX",
     "bbox": [
       352,
       508,
-      71.62109375,
+      98.212890625,
       11.9287109375
     ],
     "font_pt": 10,
@@ -289,11 +229,11 @@
   },
   {
     "page": 3,
-    "text": "03 / 06",
+    "text": "03 / 11",
     "bbox": [
       852,
       508,
-      32.578125,
+      29.2578125,
       11.9287109375
     ],
     "font_pt": 10,
@@ -301,11 +241,11 @@
   },
   {
     "page": 3,
-    "text": "AgenticRocket의 작업",
+    "text": "무엇으로 차별화할까요?",
     "bbox": [
       56,
       40,
-      164.2392578125,
+      159.7734375,
       20.27880859375
     ],
     "font_pt": 17,
@@ -313,9 +253,741 @@
   },
   {
     "page": 3,
+    "text": "What makes a product stand out?",
+    "bbox": [
+      233.7734375,
+      41,
+      240.703125,
+      19.0859375
+    ],
+    "font_pt": 16,
+    "essential": false
+  },
+  {
+    "page": 3,
+    "text": "최적화도\nUX입니다.",
+    "bbox": [
+      56,
+      121,
+      226.0263671875,
+      122.58216796875001
+    ],
+    "font_pt": 53,
+    "essential": true
+  },
+  {
+    "page": 3,
+    "text": "Performance\nis part of UX.",
+    "bbox": [
+      58,
+      276,
+      196.130859375,
+      79.31761718749999
+    ],
+    "font_pt": 34,
+    "essential": true
+  },
+  {
+    "page": 3,
+    "text": "기획 · UI · UX",
+    "bbox": [
+      551,
+      126,
+      166.58203125,
+      35.7861328125
+    ],
+    "font_pt": 30,
+    "essential": true
+  },
+  {
+    "page": 3,
+    "text": "Product · UI · UX",
+    "bbox": [
+      552,
+      171,
+      190.22656250000003,
+      31.0146484375
+    ],
+    "font_pt": 26,
+    "essential": true
+  },
+  {
+    "page": 3,
+    "text": "UX",
+    "bbox": [
+      568,
+      256,
+      35.521484375,
+      31.0146484375
+    ],
+    "font_pt": 26,
+    "essential": true
+  },
+  {
+    "page": 3,
+    "text": "빠른 반응",
+    "bbox": [
+      590,
+      321,
+      114.5244140625,
+      36.97900390625
+    ],
+    "font_pt": 31,
+    "essential": true
+  },
+  {
+    "page": 3,
+    "text": "Responsiveness",
+    "bbox": [
+      591,
+      369,
+      195.9609375,
+      32.20751953125
+    ],
+    "font_pt": 27,
+    "essential": true
+  },
+  {
+    "page": 4,
+    "text": "AGENTICROCKET",
+    "bbox": [
+      56,
+      508,
+      82.6171875,
+      11.9287109375
+    ],
+    "font_pt": 10,
+    "essential": false
+  },
+  {
+    "page": 4,
+    "text": "CORRECT. AND FAST.",
+    "bbox": [
+      352,
+      508,
+      99.8828125,
+      11.9287109375
+    ],
+    "font_pt": 10,
+    "essential": false
+  },
+  {
+    "page": 4,
+    "text": "04 / 11",
+    "bbox": [
+      852,
+      508,
+      29.326171875,
+      11.9287109375
+    ],
+    "font_pt": 10,
+    "essential": false
+  },
+  {
+    "page": 4,
+    "text": "작동, 그다음",
+    "bbox": [
+      56,
+      40,
+      82.2109375,
+      20.27880859375
+    ],
+    "font_pt": 17,
+    "essential": false
+  },
+  {
+    "page": 4,
+    "text": "Beyond working",
+    "bbox": [
+      156.2109375,
+      41,
+      115.703125,
+      19.0859375
+    ],
+    "font_pt": 16,
+    "essential": false
+  },
+  {
+    "page": 4,
+    "text": "작동을 넘어,",
+    "bbox": [
+      56,
+      123,
+      193.5546875,
+      47.71484375
+    ],
+    "font_pt": 40,
+    "essential": true
+  },
+  {
+    "page": 4,
+    "text": "올바르고\n빠르게.",
+    "bbox": [
+      56,
+      187,
+      172.8515625,
+      116.6435546875
+    ],
+    "font_pt": 50,
+    "essential": true
+  },
+  {
+    "page": 4,
+    "text": "It needs to work.\nCorrectly. And fast.",
+    "bbox": [
+      58,
+      341,
+      241.91015625,
+      67.560390625
+    ],
+    "font_pt": 28,
+    "essential": true
+  },
+  {
+    "page": 5,
+    "text": "AGENTICROCKET",
+    "bbox": [
+      56,
+      508,
+      82.6171875,
+      11.9287109375
+    ],
+    "font_pt": 10,
+    "essential": false
+  },
+  {
+    "page": 5,
+    "text": "A SPEEDUP NEEDS EVIDENCE",
+    "bbox": [
+      352,
+      508,
+      135.76171875,
+      11.9287109375
+    ],
+    "font_pt": 10,
+    "essential": false
+  },
+  {
+    "page": 5,
+    "text": "05 / 11",
+    "bbox": [
+      852,
+      508,
+      29.052734375,
+      11.9287109375
+    ],
+    "font_pt": 10,
+    "essential": false
+  },
+  {
+    "page": 5,
+    "text": "성능 개선의 조건",
+    "bbox": [
+      56,
+      40,
+      110.91503906250001,
+      20.27880859375
+    ],
+    "font_pt": 17,
+    "essential": false
+  },
+  {
+    "page": 5,
+    "text": "Verification matters",
+    "bbox": [
+      184.9150390625,
+      41,
+      140.234375,
+      19.0859375
+    ],
+    "font_pt": 16,
+    "essential": false
+  },
+  {
+    "page": 5,
+    "text": "빨라졌다면, 검증해야죠.",
+    "bbox": [
+      56,
+      101,
+      415.46484375,
+      52.486328125
+    ],
+    "font_pt": 44,
+    "essential": true
+  },
+  {
+    "page": 5,
+    "text": "A speedup needs evidence.",
+    "bbox": [
+      58,
+      165,
+      383.98828125,
+      36.97900390625
+    ],
+    "font_pt": 31,
+    "essential": true
+  },
+  {
+    "page": 5,
+    "text": "로컬 측정",
+    "bbox": [
+      80,
+      278,
+      110.830078125,
+      35.7861328125
+    ],
+    "font_pt": 30,
+    "essential": true
+  },
+  {
+    "page": 5,
+    "text": "Local benchmarks",
+    "bbox": [
+      81,
+      322,
+      212.08789062500003,
+      31.0146484375
+    ],
+    "font_pt": 26,
+    "essential": true
+  },
+  {
+    "page": 5,
+    "text": "다른 작업이 측정에 간섭",
+    "bbox": [
+      81,
+      385,
+      234.8876953125,
+      29.82177734375
+    ],
+    "font_pt": 25,
+    "essential": true
+  },
+  {
+    "page": 5,
+    "text": "Other work adds noise",
+    "bbox": [
+      81,
+      424,
+      252.4658203125,
+      29.82177734375
+    ],
+    "font_pt": 25,
+    "essential": true
+  },
+  {
+    "page": 5,
+    "text": "외부 실행 환경",
+    "bbox": [
+      542,
+      278,
+      169.8046875,
+      35.7861328125
+    ],
+    "font_pt": 30,
+    "essential": true
+  },
+  {
+    "page": 5,
+    "text": "Remote execution",
+    "bbox": [
+      543,
+      322,
+      210.28515625000003,
+      31.0146484375
+    ],
+    "font_pt": 26,
+    "essential": true
+  },
+  {
+    "page": 5,
+    "text": "검증하는 동안 개발 계속",
+    "bbox": [
+      543,
+      385,
+      234.8876953125,
+      29.82177734375
+    ],
+    "font_pt": 25,
+    "essential": true
+  },
+  {
+    "page": 5,
+    "text": "Keep building as tests run",
+    "bbox": [
+      543,
+      424,
+      277.1484375,
+      28.62890625
+    ],
+    "font_pt": 24,
+    "essential": true
+  },
+  {
+    "page": 6,
+    "text": "AGENTICROCKET",
+    "bbox": [
+      56,
+      508,
+      82.6171875,
+      11.9287109375
+    ],
+    "font_pt": 10,
+    "essential": false
+  },
+  {
+    "page": 6,
+    "text": "FROM SECURITY TO PERFORMANCE",
+    "bbox": [
+      352,
+      508,
+      166.5625,
+      11.9287109375
+    ],
+    "font_pt": 10,
+    "essential": false
+  },
+  {
+    "page": 6,
+    "text": "06 / 11",
+    "bbox": [
+      852,
+      508,
+      29.21875,
+      11.9287109375
+    ],
+    "font_pt": 10,
+    "essential": false
+  },
+  {
+    "page": 6,
+    "text": "보안에는 익숙한 선택지",
+    "bbox": [
+      56,
+      40,
+      154.9921875,
+      20.27880859375
+    ],
+    "font_pt": 17,
+    "essential": false
+  },
+  {
+    "page": 6,
+    "text": "Familiar tools for security",
+    "bbox": [
+      228.9921875,
+      41,
+      179.625,
+      19.0859375
+    ],
+    "font_pt": 16,
+    "essential": false
+  },
+  {
+    "page": 6,
+    "text": "성능 최적화도\n맡길 수 있을까요?",
+    "bbox": [
+      56,
+      96,
+      310.1484375,
+      102.646328125
+    ],
+    "font_pt": 44,
+    "essential": true
+  },
+  {
+    "page": 6,
+    "text": "Can we delegate performance, too?",
+    "bbox": [
+      58,
+      230,
+      495.8486328125,
+      36.97900390625
+    ],
+    "font_pt": 31,
+    "essential": true
+  },
+  {
+    "page": 6,
+    "text": "보안 검사와 수정 지원",
+    "bbox": [
+      58,
+      342,
+      204.75,
+      28.62890625
+    ],
+    "font_pt": 24,
+    "essential": true
+  },
+  {
+    "page": 6,
+    "text": "Security checks & fixes",
+    "bbox": [
+      491,
+      344,
+      248.25,
+      28.62890625
+    ],
+    "font_pt": 24,
+    "essential": true
+  },
+  {
+    "page": 6,
+    "text": "Strix",
+    "bbox": [
+      58,
+      399,
+      85.6640625,
+      47.71484375
+    ],
+    "font_pt": 40,
+    "essential": true
+  },
+  {
+    "page": 6,
+    "text": "Snyk",
+    "bbox": [
+      355,
+      399,
+      92.0703125,
+      47.71484375
+    ],
+    "font_pt": 40,
+    "essential": true
+  },
+  {
+    "page": 6,
+    "text": "Semgrep",
+    "bbox": [
+      647,
+      399,
+      167.8125,
+      47.71484375
+    ],
+    "font_pt": 40,
+    "essential": true
+  },
+  {
+    "page": 7,
+    "text": "AGENTICROCKET",
+    "bbox": [
+      56,
+      508,
+      82.6171875,
+      11.9287109375
+    ],
+    "font_pt": 10,
+    "essential": false
+  },
+  {
+    "page": 7,
+    "text": "BUILT WITH DAYTONA",
+    "bbox": [
+      352,
+      508,
+      103.59375,
+      11.9287109375
+    ],
+    "font_pt": 10,
+    "essential": false
+  },
+  {
+    "page": 7,
+    "text": "07 / 11",
+    "bbox": [
+      852,
+      508,
+      28.603515625,
+      11.9287109375
+    ],
+    "font_pt": 10,
+    "essential": false
+  },
+  {
+    "page": 7,
+    "text": "그래서 만들었습니다",
+    "bbox": [
+      56,
+      40,
+      136.265625,
+      20.27880859375
+    ],
+    "font_pt": 17,
+    "essential": false
+  },
+  {
+    "page": 7,
+    "text": "Introducing",
+    "bbox": [
+      210.265625,
+      41,
+      81.34375,
+      19.0859375
+    ],
+    "font_pt": 16,
+    "essential": false
+  },
+  {
+    "page": 7,
+    "text": "AgenticRocket",
+    "bbox": [
+      54,
+      103,
+      439.4619140625,
+      75.15087890625
+    ],
+    "font_pt": 63,
+    "essential": true
+  },
+  {
+    "page": 7,
+    "text": "Daytona 위에서.",
+    "bbox": [
+      58,
+      213,
+      244.14550781250003,
+      41.75048828125
+    ],
+    "font_pt": 35,
+    "essential": true
+  },
+  {
+    "page": 7,
+    "text": "Built with Daytona.",
+    "bbox": [
+      59,
+      268,
+      242.138671875,
+      34.59326171875
+    ],
+    "font_pt": 29,
+    "essential": true
+  },
+  {
+    "page": 7,
+    "text": "쉬운 연결",
+    "bbox": [
+      56,
+      381,
+      103.44140625,
+      33.400390625
+    ],
+    "font_pt": 28,
+    "essential": true
+  },
+  {
+    "page": 7,
+    "text": "Simple setup",
+    "bbox": [
+      57,
+      425,
+      144.5068359375,
+      29.82177734375
+    ],
+    "font_pt": 25,
+    "essential": true
+  },
+  {
+    "page": 7,
+    "text": "빠른 실행",
+    "bbox": [
+      346,
+      381,
+      103.44140625,
+      33.400390625
+    ],
+    "font_pt": 28,
+    "essential": true
+  },
+  {
+    "page": 7,
+    "text": "Fast startup",
+    "bbox": [
+      347,
+      425,
+      134.27734375,
+      29.82177734375
+    ],
+    "font_pt": 25,
+    "essential": true
+  },
+  {
+    "page": 7,
+    "text": "에이전트 중심",
+    "bbox": [
+      636,
+      381,
+      151.83984375,
+      33.400390625
+    ],
+    "font_pt": 28,
+    "essential": true
+  },
+  {
+    "page": 7,
+    "text": "Built for agents",
+    "bbox": [
+      637,
+      425,
+      169.0673828125,
+      29.82177734375
+    ],
+    "font_pt": 25,
+    "essential": true
+  },
+  {
+    "page": 8,
+    "text": "AGENTICROCKET",
+    "bbox": [
+      56,
+      508,
+      82.6171875,
+      11.9287109375
+    ],
+    "font_pt": 10,
+    "essential": false
+  },
+  {
+    "page": 8,
+    "text": "EXPLORE · PLAN · EDIT · VERIFY",
+    "bbox": [
+      352,
+      508,
+      143.525390625,
+      11.9287109375
+    ],
+    "font_pt": 10,
+    "essential": false
+  },
+  {
+    "page": 8,
+    "text": "08 / 11",
+    "bbox": [
+      852,
+      508,
+      29.150390625,
+      11.9287109375
+    ],
+    "font_pt": 10,
+    "essential": false
+  },
+  {
+    "page": 8,
+    "text": "실제로 하는 일",
+    "bbox": [
+      56,
+      40,
+      96.22265625,
+      20.27880859375
+    ],
+    "font_pt": 17,
+    "essential": false
+  },
+  {
+    "page": 8,
     "text": "How it works",
     "bbox": [
-      238.2392578125,
+      170.22265625,
       41,
       93.078125,
       19.0859375
@@ -324,155 +996,47 @@
     "essential": false
   },
   {
-    "page": 3,
-    "text": "병목을 찾고\n소스를 바꿉니다.",
+    "page": 8,
+    "text": "코드를 고치고, 병렬로 검증합니다.",
     "bbox": [
       56,
-      92,
-      282.1875,
-      99.45345703125
+      95,
+      521.0537109375,
+      46.52197265625
     ],
-    "font_pt": 43,
+    "font_pt": 39,
     "essential": true
   },
   {
-    "page": 3,
-    "text": "Find the bottleneck. Change the code.",
+    "page": 8,
+    "text": "Edit the code. Verify in parallel.",
     "bbox": [
       58,
-      214,
-      512.34375,
+      154,
+      413.5546875,
       35.7861328125
     ],
     "font_pt": 30,
     "essential": true
   },
   {
-    "page": 3,
-    "text": "01",
+    "page": 8,
+    "text": "하나의 AI 에이전트",
     "bbox": [
-      56,
-      294,
-      40.61328125,
-      44.13623046875
+      58,
+      232,
+      194.39062500000003,
+      31.0146484375
     ],
-    "font_pt": 37,
+    "font_pt": 26,
     "essential": true
   },
   {
-    "page": 3,
-    "text": "병목 찾기",
+    "page": 8,
+    "text": "One project. One agent.",
     "bbox": [
-      56,
-      367,
-      103.44140625,
-      33.400390625
-    ],
-    "font_pt": 28,
-    "essential": true
-  },
-  {
-    "page": 3,
-    "text": "Find wasted work",
-    "bbox": [
-      56,
-      407,
-      190.2421875,
-      28.62890625
-    ],
-    "font_pt": 24,
-    "essential": true
-  },
-  {
-    "page": 3,
-    "text": "02",
-    "bbox": [
-      357,
-      294,
-      45.9248046875,
-      44.13623046875
-    ],
-    "font_pt": 37,
-    "essential": true
-  },
-  {
-    "page": 3,
-    "text": "코드 수정",
-    "bbox": [
-      357,
-      367,
-      103.44140625,
-      33.400390625
-    ],
-    "font_pt": 28,
-    "essential": true
-  },
-  {
-    "page": 3,
-    "text": "Rewrite code",
-    "bbox": [
-      357,
-      407,
-      141.3515625,
-      28.62890625
-    ],
-    "font_pt": 24,
-    "essential": true
-  },
-  {
-    "page": 3,
-    "text": "03",
-    "bbox": [
-      659,
-      294,
-      47.0087890625,
-      44.13623046875
-    ],
-    "font_pt": 37,
-    "essential": true
-  },
-  {
-    "page": 3,
-    "text": "실행·수정 반복",
-    "bbox": [
-      659,
-      367,
-      159.46875,
-      33.400390625
-    ],
-    "font_pt": 28,
-    "essential": true
-  },
-  {
-    "page": 3,
-    "text": "Run. Learn. Retry.",
-    "bbox": [
-      659,
-      407,
-      189.328125,
-      28.62890625
-    ],
-    "font_pt": 24,
-    "essential": true
-  },
-  {
-    "page": 3,
-    "text": "한 프로젝트를 끝까지 맡는 AI",
-    "bbox": [
-      57,
-      457,
-      273.796875,
-      28.62890625
-    ],
-    "font_pt": 24,
-    "essential": true
-  },
-  {
-    "page": 3,
-    "text": "One agent. One project.",
-    "bbox": [
-      524,
-      459,
+      58,
+      270,
       255.1640625,
       28.62890625
     ],
@@ -480,331 +1044,151 @@
     "essential": true
   },
   {
-    "page": 4,
-    "text": "AGENTICROCKET",
+    "page": 8,
+    "text": "코드 탐색",
     "bbox": [
-      56,
-      508,
-      82.6171875,
-      11.9287109375
+      72,
+      350,
+      96.05273437500001,
+      31.0146484375
     ],
-    "font_pt": 10,
-    "essential": false
+    "font_pt": 26,
+    "essential": true
   },
   {
-    "page": 4,
-    "text": "DAYTONA · EXECUTION & VERIFICATION",
+    "page": 8,
+    "text": "Explore",
     "bbox": [
-      352,
-      508,
-      184.853515625,
-      11.9287109375
+      73,
+      391,
+      80.3203125,
+      28.62890625
     ],
-    "font_pt": 10,
-    "essential": false
+    "font_pt": 24,
+    "essential": true
   },
   {
-    "page": 4,
-    "text": "04 / 06",
+    "page": 8,
+    "text": "개선안",
     "bbox": [
-      852,
-      508,
-      32.646484375,
-      11.9287109375
+      258,
+      350,
+      67.412109375,
+      31.0146484375
     ],
-    "font_pt": 10,
-    "essential": false
+    "font_pt": 26,
+    "essential": true
   },
   {
-    "page": 4,
+    "page": 8,
+    "text": "Plan a fix",
+    "bbox": [
+      259,
+      391,
+      96.4453125,
+      28.62890625
+    ],
+    "font_pt": 24,
+    "essential": true
+  },
+  {
+    "page": 8,
+    "text": "직접 수정",
+    "bbox": [
+      444,
+      350,
+      96.05273437500001,
+      31.0146484375
+    ],
+    "font_pt": 26,
+    "essential": true
+  },
+  {
+    "page": 8,
+    "text": "Edit code",
+    "bbox": [
+      445,
+      391,
+      100.96875,
+      28.62890625
+    ],
+    "font_pt": 24,
+    "essential": true
+  },
+  {
+    "page": 8,
     "text": "Daytona",
     "bbox": [
-      56,
-      33,
-      104.572265625,
-      32.20751953125
+      705,
+      221,
+      100.69921875000001,
+      31.0146484375
     ],
-    "font_pt": 27,
+    "font_pt": 26,
     "essential": true
   },
   {
-    "page": 4,
-    "text": "코드 실행 공간",
+    "page": 8,
+    "text": "병렬 검증",
     "bbox": [
-      220,
-      40,
-      113.75,
-      23.857421875
+      704,
+      260,
+      88.9921875,
+      28.62890625
     ],
-    "font_pt": 20,
+    "font_pt": 24,
+    "essential": true
+  },
+  {
+    "page": 8,
+    "text": "Before / After",
+    "bbox": [
+      721,
+      306,
+      150.4921875,
+      28.62890625
+    ],
+    "font_pt": 24,
+    "essential": true
+  },
+  {
+    "page": 8,
+    "text": "Before / After",
+    "bbox": [
+      721,
+      372,
+      150.4921875,
+      28.62890625
+    ],
+    "font_pt": 24,
+    "essential": true
+  },
+  {
+    "page": 8,
+    "text": "Before / After",
+    "bbox": [
+      721,
+      438,
+      150.4921875,
+      28.62890625
+    ],
+    "font_pt": 24,
+    "essential": true
+  },
+  {
+    "page": 8,
+    "text": "수정 전후 비교",
+    "bbox": [
+      700,
+      188,
+      136.5,
+      28.62890625
+    ],
+    "font_pt": 24,
     "essential": false
   },
   {
-    "page": 4,
-    "text": "A workspace for the AI",
-    "bbox": [
-      370,
-      41,
-      203.02734375,
-      23.857421875
-    ],
-    "font_pt": 20,
-    "essential": false
-  },
-  {
-    "page": 4,
-    "text": "고친 코드가 정말 빨라졌는지.",
-    "bbox": [
-      56,
-      101,
-      453.7890625,
-      47.71484375
-    ],
-    "font_pt": 40,
-    "essential": true
-  },
-  {
-    "page": 4,
-    "text": "Prove the fix makes it faster.",
-    "bbox": [
-      58,
-      160,
-      407.59375,
-      38.171875
-    ],
-    "font_pt": 32,
-    "essential": true
-  },
-  {
-    "page": 4,
-    "text": "같은 수정안, 3곳에서 반복 검증",
-    "bbox": [
-      57,
-      225,
-      317.966796875,
-      31.0146484375
-    ],
-    "font_pt": 26,
-    "essential": true
-  },
-  {
-    "page": 4,
-    "text": "One patch. Repeated checks.",
-    "bbox": [
-      532,
-      228,
-      328.515625,
-      29.82177734375
-    ],
-    "font_pt": 25,
-    "essential": true
-  },
-  {
-    "page": 4,
-    "text": "SANDBOX 01",
-    "bbox": [
-      78,
-      294,
-      91.40625,
-      17.89306640625
-    ],
-    "font_pt": 15,
-    "essential": false
-  },
-  {
-    "page": 4,
-    "text": "수정 전",
-    "bbox": [
-      78,
-      326,
-      73.58203125,
-      31.0146484375
-    ],
-    "font_pt": 26,
-    "essential": true
-  },
-  {
-    "page": 4,
-    "text": "수정 후",
-    "bbox": [
-      216,
-      326,
-      73.58203125,
-      31.0146484375
-    ],
-    "font_pt": 26,
-    "essential": true
-  },
-  {
-    "page": 4,
-    "text": "Before",
-    "bbox": [
-      78,
-      364,
-      71.484375,
-      28.62890625
-    ],
-    "font_pt": 24,
-    "essential": true
-  },
-  {
-    "page": 4,
-    "text": "After",
-    "bbox": [
-      216,
-      364,
-      53.390625,
-      28.62890625
-    ],
-    "font_pt": 24,
-    "essential": true
-  },
-  {
-    "page": 4,
-    "text": "SANDBOX 02",
-    "bbox": [
-      368,
-      294,
-      93.5595703125,
-      17.89306640625
-    ],
-    "font_pt": 15,
-    "essential": false
-  },
-  {
-    "page": 4,
-    "text": "수정 전",
-    "bbox": [
-      368,
-      326,
-      73.58203125,
-      31.0146484375
-    ],
-    "font_pt": 26,
-    "essential": true
-  },
-  {
-    "page": 4,
-    "text": "수정 후",
-    "bbox": [
-      506,
-      326,
-      73.58203125,
-      31.0146484375
-    ],
-    "font_pt": 26,
-    "essential": true
-  },
-  {
-    "page": 4,
-    "text": "Before",
-    "bbox": [
-      368,
-      364,
-      71.484375,
-      28.62890625
-    ],
-    "font_pt": 24,
-    "essential": true
-  },
-  {
-    "page": 4,
-    "text": "After",
-    "bbox": [
-      506,
-      364,
-      53.390625,
-      28.62890625
-    ],
-    "font_pt": 24,
-    "essential": true
-  },
-  {
-    "page": 4,
-    "text": "SANDBOX 03",
-    "bbox": [
-      658,
-      294,
-      93.9990234375,
-      17.89306640625
-    ],
-    "font_pt": 15,
-    "essential": false
-  },
-  {
-    "page": 4,
-    "text": "수정 전",
-    "bbox": [
-      658,
-      326,
-      73.58203125,
-      31.0146484375
-    ],
-    "font_pt": 26,
-    "essential": true
-  },
-  {
-    "page": 4,
-    "text": "수정 후",
-    "bbox": [
-      796,
-      326,
-      73.58203125,
-      31.0146484375
-    ],
-    "font_pt": 26,
-    "essential": true
-  },
-  {
-    "page": 4,
-    "text": "Before",
-    "bbox": [
-      658,
-      364,
-      71.484375,
-      28.62890625
-    ],
-    "font_pt": 24,
-    "essential": true
-  },
-  {
-    "page": 4,
-    "text": "After",
-    "bbox": [
-      796,
-      364,
-      53.390625,
-      28.62890625
-    ],
-    "font_pt": 24,
-    "essential": true
-  },
-  {
-    "page": 4,
-    "text": "기능 검사와 성능 측정을 함께.",
-    "bbox": [
-      57,
-      428,
-      289.8193359375,
-      29.82177734375
-    ],
-    "font_pt": 25,
-    "essential": true
-  },
-  {
-    "page": 4,
-    "text": "Check behavior. Measure speed.",
-    "bbox": [
-      57,
-      464,
-      352.40625,
-      28.62890625
-    ],
-    "font_pt": 24,
-    "essential": true
-  },
-  {
-    "page": 5,
+    "page": 9,
     "text": "AGENTICROCKET",
     "bbox": [
       56,
@@ -816,131 +1200,83 @@
     "essential": false
   },
   {
-    "page": 5,
-    "text": "THE PATCH & THE EVIDENCE",
+    "page": 9,
+    "text": "A PROJECT IN. A PATCH AND EVIDENCE OUT.",
     "bbox": [
       352,
       508,
-      133.3203125,
+      208.876953125,
       11.9287109375
     ],
     "font_pt": 10,
     "essential": false
   },
   {
-    "page": 5,
-    "text": "05 / 06",
+    "page": 9,
+    "text": "09 / 11",
     "bbox": [
       852,
       508,
-      32.373046875,
+      29.21875,
       11.9287109375
     ],
     "font_pt": 10,
     "essential": false
   },
   {
-    "page": 5,
-    "text": "개발자에게 남는 것",
+    "page": 9,
+    "text": "사용자가 할 일",
     "bbox": [
       56,
       40,
-      125.60742187500001,
+      96.22265625,
       20.27880859375
     ],
     "font_pt": 17,
     "essential": false
   },
   {
-    "page": 5,
-    "text": "What you take away",
+    "page": 9,
+    "text": "Your part",
     "bbox": [
-      199.607421875,
+      170.22265625,
       41,
-      145.21875,
+      66.53125,
       19.0859375
     ],
     "font_pt": 16,
     "essential": false
   },
   {
-    "page": 5,
-    "text": "수정한 코드와\n검증 근거를 함께.",
+    "page": 9,
+    "text": "프로젝트를 맡기면,\n최적화 결과가 돌아옵니다.",
     "bbox": [
       56,
-      104,
-      264.92578125,
-      90.98197265625
+      95,
+      440.75000000000006,
+      100.31345703125
     ],
-    "font_pt": 39,
+    "font_pt": 43,
     "essential": true
   },
   {
-    "page": 5,
-    "text": "The patch.\nThe proof.",
+    "page": 9,
+    "text": "Bring your project.\nGet the patch and the evidence.",
     "bbox": [
       58,
       226,
-      167.20703125000003,
-      81.65048828125
+      415.6005859375,
+      69.39326171875
     ],
-    "font_pt": 35,
+    "font_pt": 29,
     "essential": true
   },
   {
-    "page": 5,
-    "text": "불확실하면 판단 보류",
+    "page": 9,
+    "text": "프로젝트 등록",
     "bbox": [
-      58,
-      403,
-      206.3232421875,
-      29.82177734375
-    ],
-    "font_pt": 25,
-    "essential": true
-  },
-  {
-    "page": 5,
-    "text": "Uncertain? No verdict yet.",
-    "bbox": [
-      58,
-      439,
-      279.5390625,
-      28.62890625
-    ],
-    "font_pt": 24,
-    "essential": true
-  },
-  {
-    "page": 5,
-    "text": "결과 보고서",
-    "bbox": [
-      540,
-      120,
-      109.40625,
-      28.62890625
-    ],
-    "font_pt": 24,
-    "essential": true
-  },
-  {
-    "page": 5,
-    "text": "Result report",
-    "bbox": [
-      540,
-      152,
-      138.1640625,
-      28.62890625
-    ],
-    "font_pt": 24,
-    "essential": true
-  },
-  {
-    "page": 5,
-    "text": "무엇을 바꿨나",
-    "bbox": [
-      542,
-      210,
+      77,
+      377,
       151.83984375,
       33.400390625
     ],
@@ -948,67 +1284,67 @@
     "essential": true
   },
   {
-    "page": 5,
-    "text": "Code changes",
+    "page": 9,
+    "text": "Add a project",
     "bbox": [
-      542,
-      249,
-      155.203125,
+      78,
+      419,
+      144.0,
       28.62890625
     ],
     "font_pt": 24,
     "essential": true
   },
   {
-    "page": 5,
-    "text": "기능은 유지됐나",
+    "page": 9,
+    "text": "수정 코드",
     "bbox": [
-      542,
-      300,
-      176.0390625,
+      438,
+      377,
+      103.44140625,
       33.400390625
     ],
     "font_pt": 28,
     "essential": true
   },
   {
-    "page": 5,
-    "text": "Test results",
+    "page": 9,
+    "text": "Patch",
     "bbox": [
-      542,
-      339,
-      126.140625,
+      439,
+      419,
+      61.7109375,
       28.62890625
     ],
     "font_pt": 24,
     "essential": true
   },
   {
-    "page": 5,
-    "text": "얼마나 빨라졌나",
+    "page": 9,
+    "text": "검증 결과",
     "bbox": [
-      542,
-      390,
-      176.0390625,
+      696,
+      377,
+      103.44140625,
       33.400390625
     ],
     "font_pt": 28,
     "essential": true
   },
   {
-    "page": 5,
-    "text": "Measured performance",
+    "page": 9,
+    "text": "Evidence",
     "bbox": [
-      542,
-      429,
-      251.4375,
+      697,
+      419,
+      98.3203125,
       28.62890625
     ],
     "font_pt": 24,
     "essential": true
   },
   {
-    "page": 6,
+    "page": 10,
     "text": "AGENTICROCKET",
     "bbox": [
       56,
@@ -1020,87 +1356,315 @@
     "essential": false
   },
   {
-    "page": 6,
-    "text": "LOW-LEVEL PERFORMANCE OPTIMIZATION",
+    "page": 10,
+    "text": "MARKET & BUSINESS MODEL",
     "bbox": [
       352,
       508,
-      199.27734375,
+      133.115234375,
       11.9287109375
     ],
     "font_pt": 10,
     "essential": false
   },
   {
-    "page": 6,
-    "text": "06 / 06",
+    "page": 10,
+    "text": "10 / 11",
     "bbox": [
       852,
       508,
-      32.5390625,
+      27.470703125,
       11.9287109375
     ],
     "font_pt": 10,
     "essential": false
   },
   {
-    "page": 6,
-    "text": "로우레벨 성능 최적화",
+    "page": 10,
+    "text": "비즈니스",
     "bbox": [
-      111,
-      42,
-      198.0703125,
+      56,
+      40,
+      58.76953125000001,
+      20.27880859375
+    ],
+    "font_pt": 17,
+    "essential": false
+  },
+  {
+    "page": 10,
+    "text": "Business",
+    "bbox": [
+      132.76953125,
+      41,
+      63.796875,
+      19.0859375
+    ],
+    "font_pt": 16,
+    "essential": false
+  },
+  {
+    "page": 10,
+    "text": "시장과 수익 모델",
+    "bbox": [
+      56,
+      95,
+      279.9619140625,
+      51.29345703125
+    ],
+    "font_pt": 43,
+    "essential": true
+  },
+  {
+    "page": 10,
+    "text": "Market & business model",
+    "bbox": [
+      58,
+      160,
+      336.9140625,
+      35.7861328125
+    ],
+    "font_pt": 30,
+    "essential": true
+  },
+  {
+    "page": 10,
+    "text": "초기 타깃",
+    "bbox": [
+      80,
+      261,
+      88.6640625,
       28.62890625
     ],
     "font_pt": 24,
     "essential": true
   },
   {
-    "page": 6,
-    "text": "Low-level performance optimization",
+    "page": 10,
+    "text": "Initial market",
     "bbox": [
-      111,
-      77,
-      386.671875,
+      270,
+      263,
+      136.9921875,
       28.62890625
     ],
     "font_pt": 24,
     "essential": true
   },
   {
-    "page": 6,
-    "text": "AgenticRocket",
+    "page": 10,
+    "text": "시스템·네이티브\n소프트웨어 개발팀",
     "bbox": [
-      52,
-      178,
-      544.095703125,
-      93.0439453125
-    ],
-    "font_pt": 78,
-    "essential": true
-  },
-  {
-    "page": 6,
-    "text": "AI가 고치고 실행으로 증명합니다.",
-    "bbox": [
-      57,
+      80,
       315,
-      487.359375,
+      214.541015625,
+      69.6861328125
+    ],
+    "font_pt": 30,
+    "essential": true
+  },
+  {
+    "page": 10,
+    "text": "Systems & native\nsoftware teams",
+    "bbox": [
+      81,
+      402,
+      184.7578125,
+      55.98890625
+    ],
+    "font_pt": 24,
+    "essential": true
+  },
+  {
+    "page": 10,
+    "text": "크레딧 충전",
+    "bbox": [
+      509,
+      263,
+      168.4150390625,
       44.13623046875
     ],
     "font_pt": 37,
     "essential": true
   },
   {
-    "page": 6,
-    "text": "AI makes the fix. Real runs prove the gain.",
+    "page": 10,
+    "text": "Prepaid credits",
     "bbox": [
-      58,
-      377,
-      540.9462890625,
-      34.59326171875
+      511,
+      320,
+      196.73828125,
+      33.400390625
     ],
-    "font_pt": 29,
+    "font_pt": 28,
+    "essential": true
+  },
+  {
+    "page": 10,
+    "text": "최적화·검증 사용량만큼 차감",
+    "bbox": [
+      510,
+      392,
+      278.173828125,
+      29.82177734375
+    ],
+    "font_pt": 25,
+    "essential": true
+  },
+  {
+    "page": 10,
+    "text": "Pay for optimization & verification",
+    "bbox": [
+      511,
+      434,
+      359.3203125,
+      28.62890625
+    ],
+    "font_pt": 24,
+    "essential": true
+  },
+  {
+    "page": 11,
+    "text": "AGENTICROCKET",
+    "bbox": [
+      56,
+      508,
+      82.6171875,
+      11.9287109375
+    ],
+    "font_pt": 10,
+    "essential": false
+  },
+  {
+    "page": 11,
+    "text": "LIVE DEMO",
+    "bbox": [
+      352,
+      508,
+      50.732421875,
+      11.9287109375
+    ],
+    "font_pt": 10,
+    "essential": false
+  },
+  {
+    "page": 11,
+    "text": "11 / 11",
+    "bbox": [
+      852,
+      508,
+      25.8984375,
+      11.9287109375
+    ],
+    "font_pt": 10,
+    "essential": false
+  },
+  {
+    "page": 11,
+    "text": "실제 데모",
+    "bbox": [
+      56,
+      40,
+      62.80371093750001,
+      20.27880859375
+    ],
+    "font_pt": 17,
+    "essential": false
+  },
+  {
+    "page": 11,
+    "text": "Live demo",
+    "bbox": [
+      136.8037109375,
+      41,
+      74.0625,
+      19.0859375
+    ],
+    "font_pt": 16,
+    "essential": false
+  },
+  {
+    "page": 11,
+    "text": "실제 데모를\n보시겠습니다.",
+    "bbox": [
+      56,
+      133,
+      240.58203125,
+      103.52632812499999
+    ],
+    "font_pt": 44,
+    "essential": true
+  },
+  {
+    "page": 11,
+    "text": "Let’s see it\nin action.",
+    "bbox": [
+      59,
+      272,
+      158.5224609375,
+      77.64474609375
+    ],
+    "font_pt": 33,
+    "essential": true
+  },
+  {
+    "page": 11,
+    "text": "QR로 바로 접속하세요.",
+    "bbox": [
+      59,
+      409,
+      225.1220703125,
+      29.82177734375
+    ],
+    "font_pt": 25,
+    "essential": true
+  },
+  {
+    "page": 11,
+    "text": "Scan to open the demo.",
+    "bbox": [
+      60,
+      450,
+      255.5859375,
+      28.62890625
+    ],
+    "font_pt": 24,
+    "essential": true
+  },
+  {
+    "page": 11,
+    "text": "데모 열기",
+    "bbox": [
+      565,
+      91,
+      88.6640625,
+      28.62890625
+    ],
+    "font_pt": 24,
+    "essential": true
+  },
+  {
+    "page": 11,
+    "text": "Open demo",
+    "bbox": [
+      700,
+      93,
+      125.0625,
+      28.62890625
+    ],
+    "font_pt": 24,
+    "essential": true
+  },
+  {
+    "page": 11,
+    "text": "jungwuk.jungwuk.com",
+    "bbox": [
+      570,
+      459,
+      250.1953125,
+      28.62890625
+    ],
+    "font_pt": 24,
     "essential": true
   }
 ]

@@ -21,6 +21,7 @@ The user's latest direction (2026-09-19) prioritizes functional completeness, co
 - The document title must identify AgenticRocket, not Prototype. Navigation must remain visible and operable on mobile.
 - The session agent chat is centered along the bottom; history and composer are separate neutral-black translucent panels with Gaussian-style background blur, no chat icons, and a collapsed live two-line preview of the most recent agent response while real send and queue states remain visible. Only the configured administrator may send chat messages; non-administrators see the Korean malicious-use prevention notice and the server rejects their message requests.
 - Google sign-in gates every session API. Persist ownership by Firebase UID; ordinary accounts may operate one active session at a time, while the configured administrator account may operate concurrent sessions without gaining other users' session data.
+- The Administrator demo is a server-only password route for the configured administrator identity. Store only its salted password hash and session-signing key in the restrictive runtime environment; never commit the password, hash, or session key to Git or the browser bundle.
 
 When implementing from a selected generated mock, adapt its layout, component anatomy, and content to real functions, evidence, and accessibility. Visual mismatch alone is not a blocker or a reason to delay deployment.
 
