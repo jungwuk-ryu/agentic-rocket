@@ -2,6 +2,15 @@
 
 Date: 2026-09-19, Asia/Seoul. Public service: https://jungwuk.jungwuk.com, origin port 8761.
 
+This is the historical execution record for the evidence-v2 repair and its live
+candidate. Subsequent authentication changes require sign-in to access sessions;
+the legacy demonstration session is available only to the administrator. Session
+admission now uses account ownership and one active session per ordinary account,
+with an administrator concurrency exception. The project-wide lock and test
+counts recorded below describe the earlier verification snapshot, not the latest
+access policy. Free-form follow-up chat is now administrator-only in the public
+demo. These access changes do not replace the recorded measurements.
+
 ## Scope
 
 Repairs cover all eight P1 findings and four P2 findings in the supplied review,

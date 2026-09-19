@@ -1,5 +1,9 @@
 # AgenticRocket
 
+For the product story, innovation highlights and measured demo results, see the
+[repository README](../README.md). This document covers the implementation and
+operating contract.
+
 AgenticRocket is an evidence-first optimization workspace for the published
 `jungwuk-ryu/agenticrocket-demo-perf` project. One persistent project agent
 reads and changes code in a Daytona work sandbox, freezes a candidate patch,
@@ -62,10 +66,20 @@ independence; passing checks is evidence only for the tested inputs.
 Sessions are owned by the Firebase UID that created them. Ordinary Google
 accounts are limited to one active session; the configured administrator account
 is exempt from that limit but does not receive access to another user's session.
+The **Administrator demo** button is a separate, server-issued administrator
+session: its password is verified against a salted hash in the restrictive
+runtime environment, its cookie is `HttpOnly`, `Secure`, `SameSite=Strict`, and
+it expires after eight hours. Neither the password nor its runtime hash belongs
+in Git, documentation, or the client bundle.
 Follow-up messages retain the conversation,
 actual patch and measurement evidence; requests to remeasure or continue editing
 invoke execution tools. Instructions arriving during analysis enter at the next
 completed tool boundary. A failed follow-up is not retried forever.
+
+In the public demo, free-form agent chat is restricted to administrators to limit
+abuse. This restriction is enforced by the server, not just a disabled composer.
+Ordinary accounts can run and inspect their own sessions; administrator access
+does not expose sessions owned by other users.
 
 Cancellation aborts model requests, terminates remote process sessions and checks
 the cancellation signal before later work or final publication. Benchmark
@@ -91,6 +105,8 @@ CONTEXT_SOFT_TOKENS=240000
 MAX_AGENT_TURNS=36
 FIREBASE_PROJECT_ID=daytona-70675
 AGENTICROCKET_ADMIN_EMAIL=vojougae35@gmail.com
+AGENTICROCKET_DEMO_ADMIN_PASSWORD_HASH=scrypt-v1$server-only-salt$server-only-hash
+AGENTICROCKET_DEMO_SESSION_SECRET=server-only-random-base64url-key
 ```
 
 When a credential is absent, Connections says **Configuration required** and does
@@ -119,6 +135,11 @@ Inject secrets with a restrictive external environment file; do not put them in
 shell history, the client bundle or repository. The local service uses
 `/home/ubuntu/.config/agenticrocket/runtime.env`.
 
+Create the two administrator-demo values directly in that restrictive runtime
+file. Do not copy a password or derived value into `.env.example`, a commit,
+or a client-side `VITE_` variable. Failed demo password attempts are rate
+limited; a successful sign-in receives an eight-hour, same-site session cookie.
+
 Enable **Google** in Firebase Authentication and add the deployed hostname (and
 the local development host, when needed) to Firebase's Authorized domains. The
 server validates Firebase ID tokens against Google's signing certificates; the
@@ -128,7 +149,7 @@ aligned if you override the supplied project.
 
 ## Demo sequence
 
-1. Enter an objective and select **Optimize this project**.
+1. Sign in with Google, enter an objective and select **Optimize this project**.
 2. Watch the same session pin `main`, create the work sandbox, inspect source,
    and record the agent's tool events.
 3. Inspect the frozen candidate fingerprint and real diff.
@@ -136,7 +157,7 @@ aligned if you override the supplied project.
    measurements stay visible.
 5. Download the exact patch/report and select **Prepare PR** for a demo-only,
    evidence-backed draft. No GitHub pull request is submitted.
-6. Ask “이 패치로 다시 측정해줘” in the composer: three new measurements run with
+6. As an administrator, ask “이 패치로 다시 측정해줘” in the composer: three new measurements run with
    the same fingerprint and policy, then the answer appears in the conversation.
 7. Cancel an operation, or resume an interrupted/failed session. Reopening the
    URL does not start a second execution.
